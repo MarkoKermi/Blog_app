@@ -36,7 +36,6 @@ This is a Blog App build with Rails
 - Create posts.
 - List all the posts.
 - Add comments and likes to a post.
-- See all comments and likes in a post.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
