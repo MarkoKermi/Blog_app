@@ -19,7 +19,7 @@
 
 - [📝 License](#license)
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Blog App <a name="about-blog-project"></a>
 
 This is a Blog App build with Rails
 
