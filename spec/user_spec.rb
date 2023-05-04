@@ -1,3 +1,5 @@
+require './rails_helper.rb'
+
 RSpec.describe User, type: :model do
   describe "associations" do
     it { should have_many(:comments).with_foreign_key(:author_id) }

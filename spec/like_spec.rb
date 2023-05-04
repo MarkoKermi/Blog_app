@@ -1,3 +1,5 @@
+require './rails_helper.rb'
+
 RSpec.describe Like, type: :model do
   describe "associations" do
     it { should belong_to(:author).class_name("User") }
