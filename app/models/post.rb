@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   end
 
   private
-  
+
   def recent_comments
     comments.order(created_at: :desc).limit(5)
   end
