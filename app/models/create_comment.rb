@@ -1,2 +1,0 @@
-class CreateComment < ApplicationRecord
-end
