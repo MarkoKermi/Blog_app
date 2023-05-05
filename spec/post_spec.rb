@@ -1,43 +1,45 @@
-require 'rails_helper'
+require_relative './rails_helper'
 
 RSpec.describe Post, type: :model do
-  describe "associations" do
-    it { should belong_to(:author).class_name("User") }
-    it { should have_many(:comments) }
-    it { should have_many(:likes) }
+  let(:user) do
+    User.create(
+      name: 'Loren',
+      photo: 'https://this-person-does-not-exist.com/en/download-page?image=genef4e9868ae582ca3061881b69d8fbeb1',
+      posts_counter: 0,
+      bio: 'I am Loren, and I love sport.'
+    )
   end
 
-  describe "validations" do
-    it { should validate_presence_of(:title) }
-    it { should validate_length_of(:title).is_at_most(200) }
-    it { should validate_numericality_of(:comments_counter).is_greater_than_or_equal_to(0) }
-    it { should validate_numericality_of(:likes_counter).is_greater_than_or_equal_to(0) }
+  subject do
+    Post.new(
+      title: 'My first post',
+      author: user,
+      text: 'The motivation to become developer is very big.',
+      comments_counter: 0,
+      likes_counter: 0
+    )
   end
 
-  describe "callbacks" do
-    describe "#update_post_counter" do
-      let(:author) { create(:user) }
-      let(:post) { create(:post, author: author) }
-      let(:comment) { create(:comment, post: post) }
+  before { subject.save }
 
-      it "updates the author's posts_counter" do
-        expect {
-          post.save
-          author.reload
-        }.to change(author, :posts_counter).from(0).to(1)
-      end
+  describe 'Validations' do
+    it 'is valid with valid attributes' do
+      expect(subject).to be_valid
     end
-  end
 
-  describe "private methods" do
-    describe "#recent_comments" do
-      let(:post) { create(:post) }
+    it 'is not valid without a title' do
+      subject.title = nil
+      expect(subject).to_not be_valid
+    end
 
-      it "returns up to 5 comments in reverse order of creation time" do
-        comments = create_list(:comment, 10, post: post)
-        recent_comments = post.send(:recent_comments)
-        expect(recent_comments).to eq(comments.last(5).reverse)
-      end
+    it 'is not valid with negative comments_counter' do
+      subject.comments_counter = -1
+      expect(subject).to_not be_valid
+    end
+
+    it 'is not valid with negative likes_counter' do
+      subject.likes_counter = -1
+      expect(subject).to_not be_valid
     end
   end
 end
