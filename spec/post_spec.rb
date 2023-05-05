@@ -41,6 +41,11 @@ RSpec.describe Post, type: :model do
       subject.likes_counter = -1
       expect(subject).to_not be_valid
     end
+
+    it 'is not valid when title is longer than 250 characters' do
+      subject.title = 'a' * 251
+      expect(subject).to_not be_valid
+    end
   end
   describe 'Functionality' do
     before { user.update(posts_counter: 0) } # reset posts_counter to 0
