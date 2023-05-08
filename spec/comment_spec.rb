@@ -32,6 +32,10 @@ RSpec.describe Comment, type: :model do
 
   describe 'Functionality' do
     context 'update comments_counter' do
+      before do
+        # Reset the post's likes_counter to 0 before running the test
+        post.update(comments_counter: 0)
+      end
       it 'updates the comments_counter of the post' do
         expect { subject.update_comments_counter }.to change { post.comments_counter }.from(0).to(1)
       end

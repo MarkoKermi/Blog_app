@@ -31,6 +31,10 @@ RSpec.describe Like, type: :model do
 
   describe 'Functionality' do
     context 'update likes_counter' do
+      before do
+        # Reset the post's likes_counter to 0 before running the test
+        post.update(likes_counter: 0)
+      end
       it 'updates the likes_counter of the post' do
         expect { subject.update_likes_counter }.to change { post.likes_counter }.from(0).to(1)
       end
