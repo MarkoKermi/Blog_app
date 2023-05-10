@@ -1,1 +1,13 @@
-<h2>This is one post from user!</h2>
+<%= render partial: 'user', locals: { user: @user}%>
+
+<article class="user_view">
+  <div class="bio_user">
+    <h4>Bio</h4>
+  </div>
+</article>
+
+<%= render partial: 'posts/post', collection: User.last_posts(@user), locals { show_lasts_comments: true }%>
+
+<%= link_to user_posts_path(@user.id) do %>
+  <button>See all posts</button>
+<%= end %>

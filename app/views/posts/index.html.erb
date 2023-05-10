@@ -1,1 +1,7 @@
-<h1>This is a list of posts from one user!</h1>
+<%= render partial: 'users/user', locals: { user=@user } %>
+
+<%= render partial: 'post', collection: @posts, locals: { show_lasts_comments: true} %>
+
+<button>Pagination</button>
+
+<%= end %>
