@@ -10,12 +10,9 @@
       <% end %>
 
       <div>
-        <%# <% if truncated_message %>
-          <%# <%= post.text.truncate(20) %> 
-        <%# <% else %> 
-          <%# <%= post.text %> 
-        <%# <% end %> 
-      <%# </div> %> 
+        <%= post.text.truncate(20) if truncated_message %>
+        <%= post.text unless truncated_message %>
+      </div> 
 
       <% if !local_assigns[:show_all_comments] %>
         <div class="post__counters">
