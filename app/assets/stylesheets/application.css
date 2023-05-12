@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
- 
+ .button {
+  line-height: 40px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(118, 118, 179);
+  color: white;
+ }
+
  .like-button {
   position: absolute;
   top: 0;
