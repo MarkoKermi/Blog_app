@@ -26,7 +26,7 @@
 <% if local_assigns[:show_all_comments]%>
   <% if post.comments.any? %>
     <div class="container">
-      <%= render partial: 'split/comment', collection: post.comment%>
+      <%= render partial: 'split/comment', collection: post.comments%>
     </div>
   <% end %>
 <%end%>

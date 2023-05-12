@@ -5,6 +5,7 @@
   font-family: sans-serif;
   padding: 10px;
   margin: 5%;
+  position: relative;
 }
 
 .post__counters {
