@@ -13,21 +13,3 @@
  *= require_tree .
  *= require_self
  */
- .comment_btn {
-  line-height: 40px;
-  margin: 10px;
-  border: none;
-  background-color: rgb(118, 118, 179);
-  color: white;
- }
- .like-button {
-  line-height: 40px;
-  margin: 10px;
-  border: none;
-  color: white;
-}
-.submit_btn {
-  margin: 10px;
-  border: none;
-  background-color: white;
- }
