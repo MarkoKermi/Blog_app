@@ -1,14 +1,11 @@
-<%# <%= form_with model: [@user, @post, @comment] do |form| %> 
+
 <%= form_with url: post_comments_path(@post.id), scope: :comment do |form| %>
 
-  <%= @post.errors.each do |error| %>
-    <div><%= error %></div>
-  <% end %>
-
-  <div>
+  <div class="comment_view">
     <%= form.label :text%>
     <%= form.text_area :text%>
   </div>
 
-  <%= form.submit %>
+  <div class="like-button"><%= form.submit %></div>
+
 <% end %>

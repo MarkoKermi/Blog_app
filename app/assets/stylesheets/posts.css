@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.post__counters {
+.post__container > .post__counters {
   width: 100%;
   box-sizing: border-box;
   display: flex;

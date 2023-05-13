@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- .button {
+ .comment_btn {
   line-height: 40px;
   margin: 10px;
   border: none;
@@ -22,7 +22,14 @@
  }
 
  .like-button {
-  position: absolute;
-  top: 0;
-  right: 0;
+  line-height: 40px;
+  margin: 10px;
+  border: none;
+  color: white;
 }
+
+.submit_btn {
+  margin: 10px;
+  border: none;
+  background-color: white;
+ }
