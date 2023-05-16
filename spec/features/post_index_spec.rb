@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe 'User post index page:', type: :feature do
   before(:each) do
     @user1 = User.create(name: 'unique_show', photo: 'http://localhost:3000/anything.jpg', bio: 'Anything test', posts_counter:0)
@@ -25,10 +26,10 @@ RSpec.describe 'User post index page:', type: :feature do
     visit user_posts_path(@user1.id)
     expect(page).to have_content(@user1.posts.count)
   end
-  # scenario 'I can see a posts title.' do
-  #   visit user_posts_path(@user1.id)
-  #   expect(page).to have_content("Post ##{@post1.id}")
-  # end
+  scenario 'I can see a posts title.' do
+    visit user_posts_path(@user1.id)
+    expect(page).to have_content("post one")
+  end
   scenario 'I can see some of the posts body.' do
     visit user_posts_path(@user1.id)
     expect(page).to have_content(@post1.title)
@@ -49,9 +50,9 @@ RSpec.describe 'User post index page:', type: :feature do
     visit user_posts_path(@user1.id)
     expect(page).to have_button('Pagination')
   end
-  # scenario 'When I click on a post, it redirects me to that posts show page.' do
-  #   visit user_posts_path(@user1.id)
-  #   click_link("Post ##{@user1.posts.first.id}")
-  #   expect(page).to have_current_path(user_post_path(@user1.id, @user1.posts.first.id))
-  # end
+  scenario 'When I click on a post, it redirects me to that posts show page.' do
+    visit user_posts_path(@user1.id)
+    click_link("post one")
+    expect(page).to have_current_path(user_post_path(@user1.id, @user1.posts.first.id))
+  end
 end
