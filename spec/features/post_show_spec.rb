@@ -1,11 +1,16 @@
 require 'rails_helper'
 RSpec.describe 'Post show page:', type: :feature do
   before(:each) do
-    @user1 = User.create(name: 'unique_show', photo: 'http://localhost:3000/anything.jpg', bio: 'Anything test', posts_counter:0)
-    @post1 = Post.create(title: 'post one', text: 'post one text', author: @user1, comments_counter:0, likes_counter:0)
-    @post2 = Post.create(title: 'post two', text: 'post two text', author: @user1, comments_counter:0, likes_counter:0)
-    @post3 = Post.create(title: 'post three', text: 'post three text', author: @user1, comments_counter:0, likes_counter:0)
-    @post4 = Post.create(title: 'post four', text: 'post four text', author: @user1, comments_counter:0, likes_counter:0)
+    @user1 = User.create(name: 'unique_show', photo: 'http://localhost:3000/anything.jpg', bio: 'Anything test',
+                         posts_counter: 0)
+    @post1 = Post.create(title: 'post one', text: 'post one text', author: @user1, comments_counter: 0,
+                         likes_counter: 0)
+    @post2 = Post.create(title: 'post two', text: 'post two text', author: @user1, comments_counter: 0,
+                         likes_counter: 0)
+    @post3 = Post.create(title: 'post three', text: 'post three text', author: @user1, comments_counter: 0,
+                         likes_counter: 0)
+    @post4 = Post.create(title: 'post four', text: 'post four text', author: @user1, comments_counter: 0,
+                         likes_counter: 0)
     @comment1 = Comment.create(text: 'comment one', author: @user1, post: @post1)
     @comment2 = Comment.create(text: 'comment two', author: @user1, post: @post1)
     @comment3 = Comment.create(text: 'comment three', author: @user1, post: @post1)
