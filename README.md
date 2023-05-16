@@ -1,4 +1,3 @@
-# Blog_App
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
@@ -11,7 +10,7 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-- [👥 Author](#author)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -19,81 +18,104 @@
 
 - [📝 License](#license)
 
-# 📖 Blog App <a name="about-blog-project"></a>
+# 📰 Blog App <a name="about-project"></a>
 
-This is a Blog App build with Rails
+> A fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-- <a href="https://www.ruby-lang.org/">Ruby</a>
-- <a href="https://rubyonrails.org/">Rails</a>
-- <a href="https://www.postgresql.org/">PostgreSQL</a>
+- <a href="https://www.ruby-lang.org/es/">ROR</a>
+- <a href="https://www.postgresql.org/">Postgresql</a>
 
 ### Key Features <a name="key-features"></a>
 
-- Create posts.
-- List all the posts.
-- Add comments and likes to a post.
+- ORM model
+- User, Comment, Post, and like model
+- Custom methods in each classes
+- Add validation for user and post
+- Test cases for each model
+- Add views, controllers, and routes for each model
+- Test cases for each controller
+- Add views for user and posts
+- Add forms for posts, comments, and likes
+- Add integtation test and fix n+1 problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
+To get a local copy up and running, follow these steps.
+
 ### Prerequisites
 
-To run this project you need the following dependencies:
+In order to run this project you need:
 
- - Ruby: `3.0.1`
- - Rails: `7.0.4.3+`
- - PostgreSQL: `15.2+`
+- Command line or terminal
+- IDE such as VsCode.
+- Rails needs to be installed on your system.
 
 ### Setup
 
-- Clone this repository to your local machine:
+Clone this repository to your desired folder:
+Example command:
+
 ```sh
   git clone https://github.com/MarkoKermi/Blog_app.git
-  cd Blog_app
-```
-- Install dependencies:
-```sh
-  bundle install
+  cd blog_app
+
 ```
 
-- Recreate Data Base:
+### Install
+
+Example command:
+
 ```sh
-  rake db:schema:load
+  cd blog_app
+  bundle install (install all dependencies)
+
 ```
 
 ### Usage
 
-To run the project, execute the following command in the terminal:
+To run the project redirecting to the root directory of the project and run the following command:
 
-```  sh
-  cd Blog_app
-  rails s  
+```sh
+ bin/rails server (to run web application)
+
 ```
 
-## 👥 Author <a name="author"></a>
+### Test
+
+To test the web app run the following command:
+
+```sh
+ rspec spec ( to test the web application)
+
+```
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Marko Kermichiev**
 
 - GitHub: [MarkoKermi](https://github.com/MarkoKermi)
-- Twitter: [MarkoKerm](https://twitter.com/MarkoKerm)
-- LinkedIn: [MarkoKermichiev](https://www.linkedin.com/in/marko-kermichiev/)
+- Twitter: [@MarkoKerm](https://twitter.com/MarkoKerm)
+- LinkedIn: [marko-kermichiev](https://www.linkedin.com/in/marko-kermichiev/)
+
+👤 **Zewdu Erkyhun**
+
+- GitHub: [@zewdu444](https://github.com/zewdu444)
+- Twitter: [@zewdu444](https://twitter.com/zewdu444)
+- LinkedIn: [zewdu-anley](https://www.linkedin.com/in/zewdu-anley/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add validations to the model.
-- Create controllers.
-- Create a web interface.
+- [add devise gem for authentication]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -103,20 +125,17 @@ Feel free to check the [issues page](https://github.com/MarkoKermi/Blog_app/issu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the Microverse community for their support and guidance.
+we would like to thank microverse community for the support and guidance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
