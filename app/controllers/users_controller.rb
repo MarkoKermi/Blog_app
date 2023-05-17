@@ -7,12 +7,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    if params[:id] == "sign_out"
+    if params[:id] == 'sign_out'
       sign_out_and_redirect
-      else
-        find_user
-      end
-end
+    else
+      find_user
+    end
+  end
 
   private
 

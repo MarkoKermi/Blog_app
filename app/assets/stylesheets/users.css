@@ -90,18 +90,21 @@
   border: none;
   background-color: white;
 }
+
 .sign_out_btn {
   text-align: center;
   margin-right: 25px;
 }
+
 .sign_out_btn > button {
   width: 100px;
 }
+
 .user_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #504D4D;
+  border: 1px solid #504d4d;
   border-radius: 1px;
   width: 50%;
   margin-left: auto;
@@ -116,14 +119,17 @@
   font-size: 25px;
   padding-left: 20%;
 }
+
 .user_input {
   width: 300px;
   min-height: 25px;
   margin-left: 150px;
 }
+
 .user_field {
   margin-left: 150px;
 }
+
 .user_set {
   margin-top: 20px;
   text-align: center;
